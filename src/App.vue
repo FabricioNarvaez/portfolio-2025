@@ -1,7 +1,9 @@
 <template>
-  <Header/>
+    <Header/>
+    <Hero/>
 </template>
 
 <script setup>
-  import Header from './components/Header.vue'
+    import Header from './components/Header.vue';
+    import Hero from './components/Hero.vue';
 </script>
