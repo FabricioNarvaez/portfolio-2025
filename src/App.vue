@@ -1,6 +1,7 @@
 <template>
-  <h1>test</h1>
+  <Header/>
 </template>
 
 <script setup>
+  import Header from './components/Header.vue'
 </script>
