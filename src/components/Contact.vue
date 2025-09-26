@@ -40,17 +40,16 @@
                 </FormKit>
 
                 <div class="flex-1 max-w-xs flex flex-col justify-center gap-6 text-gray-700">
-                    <div class="flex items-center gap-3 text-lg">
-                        <Icon icon="mdi:email" class="text-blue-600 text-4xl" />
-                        <a href="mailto:narvaezfabricio38@gmail.com" class="hover:underline">narvaezfabricio38@gmail.com</a>
-                    </div>
-                    <div class="flex items-center gap-3 text-lg">
-                        <Icon icon="mdi:linkedin" class="text-blue-600 text-4xl" />
-                        <a href="https://www.linkedin.com/in/fabricio-narv%C3%A1ez-narv%C3%A1ez/" target="_blank" class="hover:underline">linkedin.com/in/fabricio-narváez-narváez</a>
-                    </div>
-                    <div class="flex items-center gap-3 text-lg">
-                        <Icon icon="mdi:github" class="text-blue-600 text-4xl" />
-                        <a href="https://github.com/FabricioNarvaez" target="_blank" class="hover:underline">github.com/FabricioNarvaez</a>
+                    <div class="flex justify-center gap-3 text-lg">
+                        <a href="mailto:narvaezfabricio38@gmail.com" class="flex items-center gap-3 text-lg hover:underline">
+                            <Icon icon="mdi:email" class="text-blue-600 text-4xl" />
+                        </a>
+                        <a href="https://www.linkedin.com/in/fabricio-narv%C3%A1ez-narv%C3%A1ez/" target="_blank" class="hover:underline">
+                            <Icon icon="mdi:linkedin" class="text-blue-600 text-4xl" />
+                        </a>
+                        <a href="https://github.com/FabricioNarvaez" target="_blank" class="hover:underline">
+                            <Icon icon="mdi:github" class="text-blue-600 text-4xl" />
+                        </a>
                     </div>
                 </div>
             </div>
