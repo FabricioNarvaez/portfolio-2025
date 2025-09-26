@@ -14,11 +14,11 @@
 
         <nav class="hidden md:block">
             <ul class="flex gap-6">
-            <li><a href="#hero" class="hover:text-blue-500">Inicio</a></li>
-            <li><a href="#about" class="hover:text-blue-500">Sobre mí</a></li>
-            <li><a href="#projects" class="hover:text-blue-500">Proyectos</a></li>
-            <li><a href="#skills" class="hover:text-blue-500">Habilidades</a></li>
-            <li><a href="#contact" class="hover:text-blue-500">Contacto</a></li>
+                <li><a role="button" @click="scrollToSection('#hero')" class="cursor-pointer hover:text-blue-500 transition">Inicio</a></li>
+                <li><a role="button" @click="scrollToSection('#about')" class="cursor-pointer hover:text-blue-500 transition">Sobre mí</a></li>
+                <li><a role="button" @click="scrollToSection('#projects')" class="cursor-pointer hover:text-blue-500 transition">Proyectos</a></li>
+                <li><a role="button" @click="scrollToSection('#skills')" class="cursor-pointer hover:text-blue-500 transition">Habilidades</a></li>
+                <li><a role="button" @click="scrollToSection('#contact')" class="cursor-pointer hover:text-blue-500 transition">Contacto</a></li>
             </ul>
         </nav>
         </div>
@@ -26,11 +26,11 @@
         <Transition name="slide-down">
             <nav v-if="isOpen" class="md:hidden bg-white shadow-lg absolute top-full left-0 w-full pb-2">
                 <ul class="flex flex-col items-center gap-2 py-4">
-                <li><a href="#hero" @click="closeMenu" class="block w-full text-center py-2 text-gray-700 hover:text-blue-500 transition">Inicio</a></li>
-                <li><a href="#about" @click="closeMenu" class="block w-full text-center py-2 text-gray-700 hover:text-blue-500 transition">Sobre mí</a></li>
-                <li><a href="#projects" @click="closeMenu" class="block w-full text-center py-2 text-gray-700 hover:text-blue-500 transition">Proyectos</a></li>
-                <li><a href="#skills" @click="closeMenu" class="block w-full text-center py-2 text-gray-700 hover:text-blue-500 transition">Habilidades</a></li>
-                <li><a href="#contact" @click="closeMenu" class="block w-full text-center py-2 text-gray-700 hover:text-blue-500 transition">Contacto</a></li>
+                    <li><a role="button" @click="scrollToSection('#hero')" class="block w-full text-center py-2 text-gray-700 hover:text-blue-500 transition">Inicio</a></li>
+                    <li><a role="button" @click="scrollToSection('#about')" class="block w-full text-center py-2 text-gray-700 hover:text-blue-500 transition">Sobre mí</a></li>
+                    <li><a role="button" @click="scrollToSection('#projects')" class="block w-full text-center py-2 text-gray-700 hover:text-blue-500 transition">Proyectos</a></li>
+                    <li><a role="button" @click="scrollToSection('#skills')" class="block w-full text-center py-2 text-gray-700 hover:text-blue-500 transition">Habilidades</a></li>
+                    <li><a role="button" @click="scrollToSection('#contact')" class="block w-full text-center py-2 text-gray-700 hover:text-blue-500 transition">Contacto</a></li>
                 </ul>
             </nav>
         </Transition>
@@ -46,8 +46,21 @@
     const handleScroll = () => {
         scrolled.value = window.scrollY > 50
         if (isOpen.value) {
-            isOpen.value = false
+            isOpen.value = false;
         }
+    };
+
+    const scrollToSection = (hash) => {
+        isOpen.value = false;
+        setTimeout(() => {
+            const element = document.querySelector(hash);
+            if (element) {
+                window.scrollTo({
+                    top: element.offsetTop - 80,
+                    behavior: 'smooth'
+                })
+            }
+        }, 100);
     };
 
     const closeMenu = () => {
