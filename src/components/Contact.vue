@@ -3,9 +3,14 @@
         <div class="max-w-6xl mx-auto px-4">
             <h2 class="text-4xl font-bold text-center mb-16">Contacto</h2>
 
-            <div class="flex flex-col md:flex-row gap-12 items-start md:items-center">
+            <div class="flex flex-col md:flex-row gap-12 items-start md:items-center justify-center">
                 <FormKit type="form" @submit="handleSubmit" submit-label="Enviar"
-                        class="flex-1 bg-white p-10 rounded-3xl shadow-xl flex flex-col gap-6">
+                        :classes="{
+                            form: 'flex-1 w-full md:max-w-lg bg-white p-6 rounded-xl shadow-lg',
+                            button: 'bg-blue-600 text-white px-6 py-3 rounded-lg font-semibold hover:bg-blue-700 transition',
+                            outer: 'flex flex-col gap-6'
+                        }"
+                >
                     <FormKit
                         name="name"
                         type="text"
@@ -34,10 +39,19 @@
                     <p v-if="success" class="text-green-600 mt-2">¡Mensaje enviado correctamente!</p>
                 </FormKit>
 
-                <div class="flex-1 flex flex-col justify-center gap-6 text-gray-700">
-                    <p class="text-lg"><strong>Email:</strong> <a href="mailto:fabricio@example.com" class="text-blue-600 hover:underline">fabricio@example.com</a></p>
-                    <p class="text-lg"><strong>LinkedIn:</strong> <a href="https://www.linkedin.com/in/fabricionarvaez" target="_blank" class="text-blue-600 hover:underline">linkedin.com/in/fabricionarvaez</a></p>
-                    <p class="text-lg"><strong>GitHub:</strong> <a href="https://github.com/fabricionarvaez" target="_blank" class="text-blue-600 hover:underline">github.com/fabricionarvaez</a></p>
+                <div class="flex-1 max-w-xs flex flex-col justify-center gap-6 text-gray-700">
+                    <div class="flex items-center gap-3 text-lg">
+                        <Icon icon="mdi:email" class="text-blue-600 text-4xl" />
+                        <a href="mailto:narvaezfabricio38@gmail.com" class="hover:underline">narvaezfabricio38@gmail.com</a>
+                    </div>
+                    <div class="flex items-center gap-3 text-lg">
+                        <Icon icon="mdi:linkedin" class="text-blue-600 text-4xl" />
+                        <a href="https://www.linkedin.com/in/fabricio-narv%C3%A1ez-narv%C3%A1ez/" target="_blank" class="hover:underline">linkedin.com/in/fabricio-narváez-narváez</a>
+                    </div>
+                    <div class="flex items-center gap-3 text-lg">
+                        <Icon icon="mdi:github" class="text-blue-600 text-4xl" />
+                        <a href="https://github.com/FabricioNarvaez" target="_blank" class="hover:underline">github.com/FabricioNarvaez</a>
+                    </div>
                 </div>
             </div>
         </div>
