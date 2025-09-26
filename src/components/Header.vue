@@ -7,6 +7,7 @@
           <li><a href="#hero" class="hover:text-blue-500">Inicio</a></li>
           <li><a href="#about" class="hover:text-blue-500">Sobre mí</a></li>
           <li><a href="#projects" class="hover:text-blue-500">Proyectos</a></li>
+          <li><a href="#skills" class="hover:text-blue-500">Habilidades</a></li>
           <li><a href="#contact" class="hover:text-blue-500">Contacto</a></li>
         </ul>
       </nav>
