@@ -1,7 +1,7 @@
 <template>
   <header :class="scrolled ? 'bg-white shadow-md' : 'bg-transparent'" class="fixed w-full top-0 z-50 transition-all">
     <div class="max-w-7xl mx-auto flex justify-between items-center p-4">
-      <img src="@/assets/logo.png" alt="Logo" class="h-10">
+      <img src="@/assets/logo.png" alt="Logo" class="h-10 drop-shadow-lg">
       <nav>
         <ul class="flex gap-6">
           <li><a href="#hero" class="hover:text-blue-500">Inicio</a></li>
