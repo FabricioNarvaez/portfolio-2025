@@ -3,6 +3,7 @@
     <Hero/>
     <Projects/>
     <About/>
+    <Skills/>
     <Contact/>
 </template>
 
@@ -12,4 +13,5 @@
     import Projects from '@components/Projects.vue';
     import About from '@components/About.vue';
     import Contact from '@components/Contact.vue';
+    import Skills from './components/Skills.vue';
 </script>
