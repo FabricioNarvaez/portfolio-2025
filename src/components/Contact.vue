@@ -4,7 +4,7 @@
             <h2 class="text-4xl font-bold text-center mb-16">Contacto</h2>
 
             <div class="flex flex-col md:flex-row gap-12 items-start md:items-center justify-center">
-                <FormKit type="form" @submit="handleSubmit" submit-label="Enviar"
+                <FormKit type="form" @submit.prevent="handleSubmit" submit-label="Enviar" name="contact-form"
                         :classes="{
                             form: 'flex-1 w-full md:max-w-lg bg-white p-6 rounded-xl shadow-lg',
                             button: 'bg-blue-600 text-white px-6 py-3 rounded-lg font-semibold hover:bg-blue-700 transition',
@@ -62,9 +62,25 @@
 
     const success = ref(false)
 
-    const handleSubmit = (formData) => {
-        console.log(formData)
-        success.value = true
+    const handleSubmit = async (formData, node) => {
+        try {
+            const response = await fetch(window.location.href, { 
+                method: 'POST',
+                headers: {
+                    'Content-Type': 'application/x-www-form-urlencoded'
+                },
+                body: new URLSearchParams(formData).toString() 
+            });
+
+            if (response.ok) {
+                success.value = true;
+                node.reset();
+            } else {
+                console.error("Error al enviar el formulario a Vercel:", response.statusText);
+            }
+        } catch (e) {
+            console.error("Error de conexión:", e);
+        };
 
         setTimeout(() => success.value = false, 4000)
     }
