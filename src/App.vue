@@ -5,6 +5,7 @@
     <About/>
     <Skills/>
     <Contact/>
+    <Notification/>
 </template>
 
 <script setup>
@@ -15,6 +16,7 @@
     import About from '@components/About.vue';
     import Contact from '@components/Contact.vue';
     import Skills from '@components/Skills.vue';
+    import Notification from '@components/Notification.vue';
 
     import { useScroll } from '@composable/useScroll';
     const { handleScroll } = useScroll();

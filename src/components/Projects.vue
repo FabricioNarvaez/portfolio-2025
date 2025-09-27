@@ -10,7 +10,7 @@
 
 <script setup>
     import ProjectsCard from '@components/ProjectsCard.vue';
-    import { useProjectsStore } from '../store/projectsStore';
+    import { useProjectsStore } from '@store/projectsStore';
 
     const projectsStore = useProjectsStore();
 </script>

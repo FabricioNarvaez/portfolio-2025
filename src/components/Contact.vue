@@ -36,7 +36,6 @@
                         rows="6"
                         :validation-messages="{ required: 'El Mensaje es obligatorio'}"
                     />
-                    <p v-if="success" class="text-green-600 mt-2">¡Mensaje enviado correctamente!</p>
                 </FormKit>
 
                 <div class="flex-1 max-w-xs flex flex-col justify-center gap-6 text-gray-700">
@@ -58,14 +57,14 @@
 </template>
 
 <script setup>
-    import { ref } from 'vue'
+    import { useNotificationStore } from '@store/notification';
 
-    const success = ref(false);
+    const notificationStore = useNotificationStore();
+
     const FORM_URL = import.meta.env.VITE_FORM_URL || '';
 
     const handleSubmit = async (formData, node) => {
         try {
-            success.value = false;
             const response = await fetch(FORM_URL, { 
                 method: 'POST',
                 headers: {
@@ -74,17 +73,21 @@
                 body: JSON.stringify(formData)
             });
 
+            notificationStore.show = true;
             if (response.ok) {
-                success.value = true;
-                console.log("Formulario enviado con éxito");
+                notificationStore.text = "Formulario enviado con éxito";
+                notificationStore.error = false;
                 node.reset();
             } else {
+                notificationStore.text = "Error al enviar el formulario";
+                notificationStore.error = true;
                 console.error("Error al enviar el formulario:", response.statusText);
             }
         } catch (e) {
             console.error("Error de conexión:", e);
+            notificationStore.show = true;
+            notificationStore.text = "Error de conexión al enviar el formulario";
+            notificationStore.error = true;
         };
-
-        setTimeout(() => success.value = false, 4000)
     }
 </script>
