@@ -3,7 +3,7 @@
             class="fixed w-full top-0 z-50 transition-all duration-300">
         <div class="max-w-7xl mx-auto flex justify-between items-center p-4">
         
-        <a href="#hero">
+        <a role="button" @click="scrollToSection('#hero')">
             <img src="@/assets/logo.png" alt="Logo" class="h-10 drop-shadow-md">
         </a>
 
