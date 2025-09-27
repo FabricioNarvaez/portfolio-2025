@@ -1,6 +1,6 @@
 <template>
     <section id="contact" class="py-20 bg-gray-50">
-        <div class="max-w-6xl mx-auto px-4">
+        <div class="max-w-6xl mx-auto px-4" v-scroll-reveal="{ delay: 200 }">
             <h2 class="text-4xl font-bold text-center mb-16">Contacto</h2>
 
             <div class="flex flex-col md:flex-row gap-12 items-start md:items-center justify-center">

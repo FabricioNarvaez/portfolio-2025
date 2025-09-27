@@ -12,6 +12,7 @@ export default defineConfig({
       '@store': '/src/store',
       '@assets': '/src/assets',
       '@views': '/src/views',
+      '@directives': '/src/directives',
     }
   }
 })

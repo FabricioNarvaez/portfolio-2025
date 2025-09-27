@@ -5,7 +5,7 @@
 
             <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
                 
-                <div class="skill-card" data-aos="fade-up" data-aos-delay="0">
+                <div class="skill-card" data-aos="fade-up" data-aos-delay="0"  v-scroll-reveal="{ delay: 200 }">
                     <h3 class="text-2xl font-semibold mb-4 text-blue-600 border-b pb-2">Frontend</h3>
                     <div class="flex flex-wrap gap-4 justify-center">
                         <div class="skill-item">
@@ -32,10 +32,10 @@
                             <Icon icon="logos:tailwindcss-icon" class="skill-icon" />
                             <span class="skill-name">Tailwind</span>
                         </div>
-                        </div>
+                    </div>
                 </div>
 
-                <div class="skill-card" data-aos="fade-up" data-aos-delay="100">
+                <div class="skill-card" data-aos="fade-up" data-aos-delay="100" v-scroll-reveal="{ delay: 300 }">
                     <h3 class="text-2xl font-semibold mb-4 text-blue-600 border-b pb-2">Backend</h3>
                     <div class="flex flex-wrap gap-4 justify-center">
                         
@@ -63,11 +63,10 @@
                             <Icon icon="logos:python" class="skill-icon" />
                             <span class="skill-name">Python</span>
                         </div>
-                        
                     </div>
                 </div>
 
-                <div class="skill-card" data-aos="fade-up" data-aos-delay="200">
+                <div class="skill-card" data-aos="fade-up" data-aos-delay="200" v-scroll-reveal="{ delay: 400 }">
                     <h3 class="text-2xl font-semibold mb-4 text-blue-600 border-b pb-2">Bases de Datos</h3>
                     <div class="flex flex-wrap gap-4 justify-center">
                         
@@ -84,7 +83,7 @@
                     </div>
                 </div>
 
-                <div class="skill-card" data-aos="fade-up" data-aos-delay="300">
+                <div class="skill-card" data-aos="fade-up" data-aos-delay="300" v-scroll-reveal="{ delay: 200 }">
                     <h3 class="text-2xl font-semibold mb-4 text-blue-600 border-b pb-2">Testing</h3>
                     <div class="flex flex-wrap gap-4 justify-center">
                         
@@ -105,7 +104,7 @@
                     </div>
                 </div>
                 
-                <div class="skill-card" data-aos="fade-up" data-aos-delay="400">
+                <div class="skill-card" data-aos="fade-up" data-aos-delay="400" v-scroll-reveal="{ delay: 300 }">
                     <h3 class="text-2xl font-semibold mb-4 text-blue-600 border-b pb-2">DevOps & Tools</h3>
                     <div class="flex flex-wrap gap-4 justify-center">
                         
@@ -141,7 +140,7 @@
                     </div>
                 </div>
                 
-                <div class="skill-card" data-aos="fade-up" data-aos-delay="500">
+                <div class="skill-card" data-aos="fade-up" data-aos-delay="500" v-scroll-reveal="{ delay: 400 }">
                     <h3 class="text-2xl font-semibold mb-4 text-blue-600 border-b pb-2">Metodologías</h3>
                     <div class="flex flex-wrap gap-4 justify-center">
                         <div class="skill-item">

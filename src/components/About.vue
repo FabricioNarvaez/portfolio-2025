@@ -2,12 +2,12 @@
     <section id="about" class="py-20 bg-white">
         <div class="max-w-6xl mx-auto px-4 flex flex-col md:flex-row items-center gap-12">
         
-        <div class="flex-1 flex justify-center">
+        <div class="flex-1 flex justify-center" v-scroll-reveal="{ delay: 200 }">
             <img src="@assets/fabricio.jpg" alt="Fabricio Narváez" 
                 class="rounded-2xl shadow-lg w-64 h-64 object-cover border-4 border-blue-500" />
         </div>
 
-        <div class="flex-1">
+        <div class="flex-1" v-scroll-reveal="{ delay: 400 }">
             <h2 class="text-4xl font-bold mb-6">Sobre mí</h2>
             <p class="text-gray-700 mb-6 leading-relaxed">
             Desarrollador Front-End con más de 3 años de experiencia construyendo aplicaciones web SPA y SSR en entornos colaborativos y ágiles. Especializado en Vue 3 y NuxtJS, con capacidad para desarrollar desde cero interfaces modernas, optimizadas y escalables, integradas con APIs REST. Con experiencia tanto freelance como en empresas del sector retail y energético.

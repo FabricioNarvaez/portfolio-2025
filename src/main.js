@@ -5,6 +5,7 @@ import App from './App.vue'
 import { plugin, defaultConfig } from '@formkit/vue'
 import { Icon } from '@iconify/vue'
 import { createPinia } from 'pinia'
+import VScrollReveal from '@directives/v-scroll-reveal.js'
 
 createApp(App)
 .use(plugin, defaultConfig({
@@ -12,4 +13,5 @@ createApp(App)
 }))
 .use(createPinia())
 .component('Icon', Icon)
+.directive('scroll-reveal', VScrollReveal)
 .mount('#app')
