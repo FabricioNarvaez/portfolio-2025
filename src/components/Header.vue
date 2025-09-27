@@ -38,37 +38,9 @@
 </template>
 
 <script setup>
-    import { ref, onMounted, onUnmounted } from 'vue';
+    import { useScroll } from '@composable/useScroll';
 
-    const scrolled = ref(false);
-    const isOpen = ref(false);
-
-    const handleScroll = () => {
-        scrolled.value = window.scrollY > 50
-        if (isOpen.value) {
-            isOpen.value = false;
-        }
-    };
-
-    const scrollToSection = (hash) => {
-        isOpen.value = false;
-        setTimeout(() => {
-            const element = document.querySelector(hash);
-            if (element) {
-                window.scrollTo({
-                    top: element.offsetTop - 80,
-                    behavior: 'smooth'
-                })
-            }
-        }, 100);
-    };
-
-    const closeMenu = () => {
-        isOpen.value = false
-    };
-
-    onMounted(() => window.addEventListener('scroll', handleScroll));
-    onUnmounted(() => window.removeEventListener('scroll', handleScroll));
+    const { isOpen, scrolled, scrollToSection } = useScroll();
 </script>
 
 <style scoped>
