@@ -60,23 +60,26 @@
 <script setup>
     import { ref } from 'vue'
 
-    const success = ref(false)
+    const success = ref(false);
+    const FORM_URL = import.meta.env.VITE_FORM_URL || '';
 
     const handleSubmit = async (formData, node) => {
         try {
-            const response = await fetch(window.location.href, { 
+            success.value = false;
+            const response = await fetch(FORM_URL, { 
                 method: 'POST',
                 headers: {
-                    'Content-Type': 'application/x-www-form-urlencoded'
+                    'Content-Type': 'application/json'
                 },
-                body: new URLSearchParams(formData).toString() 
+                body: JSON.stringify(formData)
             });
 
             if (response.ok) {
                 success.value = true;
+                console.log("Formulario enviado con éxito");
                 node.reset();
             } else {
-                console.error("Error al enviar el formulario a Vercel:", response.statusText);
+                console.error("Error al enviar el formulario:", response.statusText);
             }
         } catch (e) {
             console.error("Error de conexión:", e);
