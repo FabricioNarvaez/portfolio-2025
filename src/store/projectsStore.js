@@ -31,6 +31,15 @@ export const useProjectsStore = defineStore('projects', ()=>{
         },
         {
             id: 4,
+            title: 'Web Empresa de Limpieza',
+            alt: 'Proyecto de desarrollo web para empresa de limpieza',
+            description: 'Desarrollo de una web moderna y atractiva para una empresa de servicios de limpieza. Contamos con secciones como inicio, servicios, sobre nosotros y contacto con un formulario funcional.',
+            technologies: ['Vue', 'Vue Router', 'Formkit', 'Tailwind CSS', 'JavaScript', 'Vercel', 'Google My Business'],
+            image: 'images/lican.png',
+            url: 'https://www.limpiezaslican.es/'
+        },
+        {
+            id: 4,
             title: 'Web para Torneo de Fútbol v1.0',
             alt: 'Proyecto de desarrollo web para torneo de fútbol',
             description: 'Desarrollo de una web básica funcional para un torneo de fútbol, con clasificación, horarios, resultados y sanciones, y sección admin para introducir los resultados de las jornadas.',
