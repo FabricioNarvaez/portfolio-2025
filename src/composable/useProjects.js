@@ -1,7 +1,7 @@
-import { defineStore } from "pinia";
+import { ref } from 'vue';
 
-export const useProjectsStore = defineStore('projects', ()=>{
-    const projects = [
+export function useProjects() {
+    const projects = ref([
         {
             id: 1,
             title: 'Migración del frontal de El Corte Inglés',
@@ -56,7 +56,7 @@ export const useProjectsStore = defineStore('projects', ()=>{
             image: 'images/amigos-por-el-deporte.png',
             url: 'https://soccer-front.vercel.app/'
         }
-    ];
+    ]);
 
     return { projects };
-});
+};
