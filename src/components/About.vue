@@ -10,7 +10,7 @@
         <div class="flex-1" v-scroll-reveal="{ delay: 400 }">
             <h2 class="text-4xl font-bold mb-6">Sobre mí</h2>
             <p class="text-gray-700 mb-6 leading-relaxed">
-            Desarrollador Front-End con más de 3 años de experiencia construyendo aplicaciones web SPA y SSR en entornos colaborativos y ágiles. Especializado en Vue 3 y NuxtJS, con capacidad para desarrollar desde cero interfaces modernas, optimizadas y escalables, integradas con APIs REST. Con experiencia tanto freelance como en empresas del sector retail y energético.
+                Desarrollador Front-End con 4 años de experiencia construyendo aplicaciones web modernas, escalables y optimizadas. Especializado en Vue 3 y NuxtJS, he trabajado tanto en proyectos corporativos de gran escala como en desarrollos end-to-end para clientes de distintos sectores (IA, gestión deportiva, servicios, entre otros).
             </p>
 
             <div class="flex gap-4 flex-wrap">
