@@ -15,8 +15,8 @@
         <nav class="hidden md:block">
             <ul class="flex gap-6">
                 <li><a role="button" @click="scrollToSection('#hero')" class="cursor-pointer hover:text-blue-500 transition font-semibold">Inicio</a></li>
-                <li><a role="button" @click="scrollToSection('#about')" class="cursor-pointer hover:text-blue-500 transition font-semibold">Sobre mí</a></li>
                 <li><a role="button" @click="scrollToSection('#projects')" class="cursor-pointer hover:text-blue-500 transition font-semibold">Proyectos</a></li>
+                <li><a role="button" @click="scrollToSection('#about')" class="cursor-pointer hover:text-blue-500 transition font-semibold">Sobre mí</a></li>
                 <li><a role="button" @click="scrollToSection('#skills')" class="cursor-pointer hover:text-blue-500 transition font-semibold">Habilidades</a></li>
                 <li><a role="button" @click="scrollToSection('#contact')" class="cursor-pointer hover:text-blue-500 transition font-semibold">Contacto</a></li>
             </ul>
